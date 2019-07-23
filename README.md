@@ -9,8 +9,9 @@
  2. Click 'Launch Instance'
     ![2](images/launch_instance.png)
  3. Select 'Amazon Linux 2 AMI (HVM), SSD Volume Type' AMI
-    ![3](images/instance_type.png)
+    ![3](images/ami.png)
  4. Select 't2.micro' as Instance type and click 'Next: Configure Instance Details'
+    ![4](images/instance_type.png)
  5. While leaving rest of configurations default on the 'Configure Instance Details' page, scroll to the bottom of the page and expand 'Additional Details'.
     ![5](images/conf_instance_details.png)
  6. Copy the following snipet of code in the 'User data' text box:
