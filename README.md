@@ -29,7 +29,7 @@ find /bootstrap_ec2/ -type f -iname "*.sh" -exec chmod +x {} \;
  10. After saving the key pair, click 'Launch Instances'.
    ![10](images/launch_instances.png)
  
-### Accessing your webserver
+### Accessing your webserver (via browser)
  1.  Go to EC2 page in AWS and click 'Running Instances' link. You should now see the EC2 instance you created earlier.
 	 https://console.aws.amazon.com/ec2/v2/home
  2. Select the instance row and get instance's 'IPv4 Public IP' under the 'Description' tab.
@@ -41,3 +41,11 @@ find /bootstrap_ec2/ -type f -iname "*.sh" -exec chmod +x {} \;
  2. Change to bootstrap script to point to your forked repo i.e. `git clone https://github.com/[YOUR_GIT_USERNAME]/bootstrap_ec2.git`
  3. Make and commit changes to .html files in `html_files` folder in the git repo e.g. change to index.html
  4. Create an EC2 instance with your new bootstrap script (now pointing to forked repo in your git)
+
+
+ ### Accessing your webserver (via SSH)
+ 1. Open the terminal on your laptop.
+ 2. CD to the dir where you downloaded your key-pair.
+ 3. Change privs on the key-pair file.
+ `chmod 400 FILE.pem`
+ 4. ssh -l ec2-user IPV4_address -i key-pair.pem
