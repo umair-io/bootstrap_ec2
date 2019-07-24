@@ -15,8 +15,8 @@
  5. While leaving rest of configurations default on the 'Configure Instance Details' page, scroll to the bottom of the page and expand 'Additional Details'.
     ![5](images/conf_instance_details.png)
  6. Copy the following snipet of code in the 'User data' text box:
-`#!/bin/sh
-yum install -y git
+`#!/bin/sh;
+yum install -y git;
 git clone https://github.com/umair-io/bootstrap_ec2.git
 find /bootstrap_ec2/ -type f -iname "*.sh" -exec chmod +x {} \;
 /bootstrap_ec2/main.sh`
