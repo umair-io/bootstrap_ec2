@@ -15,11 +15,14 @@
  5. While leaving rest of configurations default on the 'Configure Instance Details' page, scroll to the bottom of the page and expand 'Additional Details'.
     ![5](images/conf_instance_details.png)
  6. Copy the following snipet of code in the 'User data' text box:
-`#!/bin/sh;
-yum install -y git;
-git clone https://github.com/umair-io/bootstrap_ec2.git;
+````
+#!/bin/sh;
+#!/bin/sh
+yum install -y git
+git clone https://github.com/umair-io/bootstrap_ec2.git
 find /bootstrap_ec2/ -type f -iname "*.sh" -exec chmod +x {} \;
-/bootstrap_ec2/main.sh`
+/bootstrap_ec2/main.sh
+```
    ![6](images/bootstrap_script.png)
  7. Keep click 'Next: ...' (bottom of the page) until you get to 'Configure Security Group' page.
  8. Select 'Create a **new** security group' and add a 'HTTP' rule (using the drop down list). Following that click 'Review and Launch'
